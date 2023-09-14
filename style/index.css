@@ -7,13 +7,19 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "DM Sans", sans-serif;
+  font-family: Montserrat;
   color: #fff;
 }
 
 html,
 body {
   background-color: #121921;
+}
+
+main {
+  width: 100%;
+  position: fixed;
+  margin-bottom: 10%;
 }
 
 #content {
@@ -31,31 +37,55 @@ body {
 
 .buttons-row {
   width: 80%;
-  margin-top: 30px;
+  margin-top: 50px;
+}
+
+button {
+  color: white;
+  font-family: Montserrat;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 18px;
 }
 
 .join-button {
   margin-right: 10px;
   background: #00aeff;
+  border: 2px solid #00aeff;
 }
 
-button {
+.join-button:hover {
+  background: #00aeff10;
+  color: #00aeff;
+  text-decoration: underline;
+  transition: 0.3s ease-out;
+}
+
+.about-button {
   background: rgba(255, 255, 255, 0.03);
-  color: white;
-  font-family: "DM Sans", sans-serif;
-  border: none;
-  font-size: 16px;
-  border-radius: 10px;
-  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0);;
+  transition: 0.3s ease-out;
 }
 
+.about-button:hover {
+  background: transparent; 
+  border: 2px solid white;
+  transition: 0.3s ease-out;
+}
 /* NAVBAR STYLES */
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(21, 21, 21, 0.5);
+}
 .navContainer li {
   display: inline-flex;
 }
 
 .navContainer a {
-  padding: 1rem 1.6em;
+  padding: 1.2rem 1.6em;
   transition: all 0.3s ease-in-out;
 }
 
@@ -64,15 +94,24 @@ button {
 }
 
 .navContainer ul {
-  background-color: rgba(21, 21, 21, 0.3);
+  background-color: rgba(21, 21, 21, 0.5);
 }
 
-.navContainer.h2h2000 {
+.navContainer nav {
   float: right;
 }
 
-/* FONTS */
+.navContainer {
+  width: 100%;
+}
 
+.logo {
+  position: relative;
+  top: 0.153em;
+  margin-left: 50px;
+}
+
+/* FONTS */
 h1 {
   font-family: Montserrat;
   font-size: 60px

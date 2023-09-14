@@ -11,28 +11,33 @@
 </head>
 
 <body>
+  <main>
   <div id="content">
     <div class="navContainer">
+      <div class="logo">
+        <h2 onclick="document.location.href = './'">Logo</h2>
+      </div>
       <nav>
         <ul>
-          <li><h2><a style="cursor: pointer;" onclick="document.location.href = './'">HTML Club</a></h2></li>
-          <li><a style="cursor: pointer;" onclick="document.location.href = './'">Home</a></li>
-          <li><a style="cursor: pointer;" onclick="document.location.href = '../about/index.html'">About</a></li>
-          <li><a style="cursor: pointer;" onclick="document.location.href = '../join/index.html'">Join</a></li>
-          <li><a style="cursor: pointer;" onclick="document.location.href = '../calendar/index.html'">Calendar</a></li>
+          <li><a onclick="document.location.href = './'">Home</a></li>
+          <li><a onclick="document.location.href = '../about/index.html'">About</a></li>
+          <li><a onclick="document.location.href = '../join/index.html'">Join</a></li>
+          <li><a onclick="document.location.href = '../calendar/index.html'">Calendar</a></li>
         </ul>
       </nav>
     </div>
 
     <section id="greeting">
-      <h1>WWHS</h1>
-      <h1>HTML Club</h1>
+      <h1 style="color: #00aeff">WWHS</h1>
+      <h1 style="margin-top: 10px">HTML Club</h1>
       <div class="buttons-row">
         <button class="join-button">Join Today</button>
-        <button>About the Club</button>
+        <button class="about-button">About the Club</button>
       </div>
     </section>
   </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
