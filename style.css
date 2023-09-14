@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Gruppo&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "DM Sans", sans-serif;
+  color: #fff;
+}
+
+html,
+body {
+  background-color: #1a1e23;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+
+#greeting {
+  margin-left: 15%;
+  margin-top: 13%;
+
+}
+
+.buttons-row {
+  width: 80%;
+  margin-top: 30px;
+}
+
+.join-button {
+  margin-right: 10px;
+  background: #00aeff;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* NAVBAR STYLES */
+.navContainer li {
+  display: inline-flex;
+}
+
+.navContainer a {
+  padding: 1rem 1.6em;
+  transition: all 0.3s ease-in-out;
+}
+
+.navContainer a:hover {
+  background-color: #ffffff20;
+}
+
+.navContainer ul {
+  background-color: rgba(21, 21, 21, 0.4);
+}
+
+/* FONTS */
+
+h1 {
+  font-family: Montserrat;
+  font-size: 60px
+}
