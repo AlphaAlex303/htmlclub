@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/index.css" type="text/css">
-  <title>Join - WWHS HTML Club</title>
+  <title>Docs</title>
 </head>
 
 <body>
@@ -27,18 +28,30 @@
         </ul>
       </nav>
     </div>
-
-    <section id="greeting">
-      <h1 style="color: #00aeff">Ready to start</h1>
-      <h1 style="margin-top: 10px">Coding?</h1>
-      <div class="buttons-row">
-        <button onclick="document.location.href = '../sign-up'" class="join-button">Let's do this!</button>
-        <button class="about-button">More Info</button>
-      </div>
+<center>
+        <section style="margin-left: 0%;" id="greeting">
+          <h1 style="animation: fade-in-top 0.5s ease; margin-top: 15%; color: #00aeff">Docs</h1>
+          <h1 style="animation: fade-in-top 0.9s ease; margin-top: 2%; font-size: 45px;">Your Place For <span class="auto-type"></span></h1>
+          <p style="margin-top: 40px;"></p>
+          <center>
+      <button style="animation: fade-in-top 1.1s ease;" onclick="document.location.href = '../help/html-doc'" class="about-button">HTML</button>
+      <button style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help/css-doc'" class="about-button">CSS</button>
+      <button style="animation: fade-in-top 1.7s ease;" onclick="document.location.href = '../help/js-doc'" class="about-button">JS</button>
+    </center>
     </section>
-  </div>
+    </center>
+    </div>
   </main>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+        strings: ["HTML.", "CSS.", "JS.", "Everything."],
+        typeSpeed: 68,
+        backSpeed: 100,
+        loop: true
+      })
+  </script>
 </body>
 
 </html>
