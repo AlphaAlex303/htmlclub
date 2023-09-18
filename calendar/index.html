@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="icon" href="../assets/favicon.svg">
+  <title>About - WWHS HTML Club</title>
+</head>
+<body>
+  <main>
+    <div id="content">
+      <div class="navContainer">
+        <div class="logo">
+          <h2 onclick="document.location.href = '../'"><img style="width: 30px;" src="../assets/logo.svg"></h2>
+        </div>
+        <nav>
+          <ul>
+          <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = '../'">Home</a></li>
+          <li><a style="animation: fade-in-top 0.8s ease;" onclick="document.location.href = '../about'">About</a></li>
+          <li><a style="animation: fade-in-top 1s ease;" onclick="document.location.href = '../join'">Join</a></li>
+          <li><a style="animation: fade-in-top 1.2s ease;" onclick="document.location.href = '../calendar'">Calendar</a></li>
+          <li><a style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help'">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section style="margin-left: 0%" id="greeting">
+        <div class="calendar">
+          <div class="calendar-header">
+            <h2 style="animation: fade-in-top 0.5s ease;" id="calendar-month"></h2>
+            <div style="animation: fade-in-top 1s ease; margin-top: 20px;" class="calendar-year" id="calendar-year"></div>
+          </div>
+          <div style="animation: fade-in-top 1.5s ease; margin-top: 40px;" class="calendar-days" id="calendar-days"></div>
+            </p>
+      </div>
+      </section>
+      </div>
+      <center>
+         <section style="margin-top: 25%">
+            <p><a>Github</a> • <a>Join</a> • <a onclick="">Discord</a> </p>
+            <p style="margin-bottom: 6%; font-size: 15px;">2023-2024</p>
+         </section>
+         </div>
+      </center>
+      </main>
+    <script src="script.js"></script>
+    <script>
+    var currentDate = new Date();
+    var calendarMonth = document.getElementById('calendar-month');
+    var calendarYear = document.getElementById('calendar-year');
+    var calendarDays = document.getElementById('calendar-days');
+
+    function renderCalendar() {
+      var currentMonth = currentDate.toLocaleString('default', { month: 'long' });
+      var currentYear = currentDate.getFullYear();
+      calendarMonth.textContent = currentMonth;
+      calendarYear.textContent = currentYear;
+      calendarDays.innerHTML = '';
+
+      var daysInMonth = new Date(currentYear, currentDate.getMonth() + 1, 0).getDate();
+      for (var i = 1; i <= daysInMonth; i++) {
+        var calendarDay = document.createElement('div');
+        calendarDay.classList.add('calendar-day');
+
+        var dayNumber = document.createElement('span');
+        dayNumber.classList.add('day-number');
+        dayNumber.textContent= i;
+        calendarDay.appendChild(dayNumber);
+
+        if (i === currentDate.getDate()) {
+          calendarDay.classList.add('highlight');
+        }
+
+        calendarDay.addEventListener('click', function () {
+          var allDays = document.querySelectorAll('.calendar-day');
+          allDays.forEach(function (day) {
+            day.classList.remove('highlight');
+          });
+
+          this.classList.add('highlight');
+        });
+
+        calendarDays.appendChild(calendarDay);
+      }
+    }
+
+    renderCalendar();
+  </script>
+</body>
+</html>

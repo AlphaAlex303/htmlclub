@@ -6,51 +6,96 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/index.css" type="text/css">
-  <title>Docs</title>
-</head>
+  <link rel="icon" href="../assets/favicon.svg">
+  <title>Docs - WWHS HTML Club</title>
+  <style>
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      padding: 20px;
+      margin-top: 5%;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 25px;
+      text-align: center;
+    }
 
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-description {
+      font-size: 16px;
+    }
+
+    .card-container-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
 <body>
   <main>
-  <div id="content">
-    <div class="navContainer">
-      <div class="logo">
-        <h2 onclick="document.location.href = './'"><img style="animation: fade-in-top 0.6s ease; width: 30px;" src="/assets/logo.svg"></h2>
+    <div id="content">
+      <div class="navContainer">
+        <div class="logo">
+          <h2 onclick="document.location.href = '../'"><img style="width: 30px;" src="../assets/logo.svg"></h2>
+        </div>
+        <nav>
+          <ul>
+          <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = '../'">Home</a></li>
+          <li><a style="animation: fade-in-top 0.8s ease;" onclick="document.location.href = '../about'">About</a></li>
+          <li><a style="animation: fade-in-top 1s ease;" onclick="document.location.href = '../join'">Join</a></li>
+          <li><a style="animation: fade-in-top 1.2s ease;" onclick="document.location.href = '../calendar'">Calendar</a></li>
+          <li><a style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help'">Docs</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = './'">Home</a></li>
-          <li><a style="animation: fade-in-top 0.8s ease; onclick="document.location.href = '../about'">About</a></li>
-          <li><a style="animation: fade-in-top 1s ease; onclick="document.location.href = '../join'">Join</a></li>
-          <li><a style="animation: fade-in-top 1.2s ease; onclick="document.location.href = '../calendar'">Calendar</a></li>
-          <li><a style="animation: fade-in-top 1.4s ease;onclick="document.location.href = '../help'">Docs</a></li>
-        </ul>
-      </nav>
-    </div>
-<center>
+      <center>
         <section style="margin-left: 0%;" id="greeting">
           <h1 style="animation: fade-in-top 0.5s ease; margin-top: 15%; color: #00aeff">Docs</h1>
           <h1 style="animation: fade-in-top 0.9s ease; margin-top: 2%; font-size: 45px;">Your Place For <span class="auto-type"></span></h1>
           <p style="margin-top: 40px;"></p>
           <center>
-      <button style="animation: fade-in-top 1.1s ease;" onclick="document.location.href = '../help/html-doc'" class="about-button">HTML</button>
-      <button style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help/css-doc'" class="about-button">CSS</button>
-      <button style="animation: fade-in-top 1.7s ease;" onclick="document.location.href = '../help/js-doc'" class="about-button">JS</button>
-    </center>
-    </section>
-    </center>
+            <div class="card-container-wrapper">
+              <div style="animation: fade-in-top 1.5s ease;" class="card-container">
+                <h2 style="margin-top: 35px" class="card-title">HTML</h2>
+                <button style="margin-top: 40px" class="about-button" onclick="document.location.href = './html-doc'">Get Help</button>
+              </div>
+              <div style="animation: fade-in-top 2s ease;" class="card-container">
+                <h2 style="margin-top: 35px" class="card-title">CSS</h2>
+                <button style="margin-top: 40px" class="about-button"  onclick="document.location.href = './css-doc'">Get Help</button>
+              </div>
+              <div style="animation: fade-in-top 2.5s ease;" class="card-container">
+                <h2 style="margin-top: 35px" class="card-title">JavaScript</h2>
+                <button style="margin-top: 40px" class="about-button" onclick="document.location.href = './js-doc'">Get Help</button>
+              </div>
+            </div>
+          </center>
+        </section>
+      </center>
     </div>
   </main>
   <script src="script.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed(".auto-type", {
-        strings: ["HTML.", "CSS.", "JS.", "Everything."],
-        typeSpeed: 68,
-        backSpeed: 100,
-        loop: true
-      })
+      strings: ["HTML.", "CSS.", "JS.", "Everything."],
+      typeSpeed: 68,
+      backSpeed: 100,
+      loop: true
+    })
   </script>
 </body>
 

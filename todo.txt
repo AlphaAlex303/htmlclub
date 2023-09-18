@@ -1,0 +1,12 @@
+1. Finish calander
+  a. Add hilight on current day
+  b. Add Day of week on card
+  c. Events function
+2. Docs
+  a. Finish HTML doc page
+  b. Finish CSS doc page
+  c. Finish JS doc page
+3. Join
+  a. Fix Curser issue
+4.
+  a. 
