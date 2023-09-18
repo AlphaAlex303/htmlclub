@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/index.css" type="text/css">
+  <link rel="icon" href="../assets/favicon.svg">
+  <title>Live Sign up - WWHS HTML Club</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+.fade-out {
+  animation: fadeOutAnimation 0.5s ease-out;
+}
+
+.fade-in {
+  animation: fadeInAnimation 0.5s ease-in;
+}
+    .slide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="content">
+      <div class="navContainer">
+      </div>
+      <center>
+        <section style="margin-left: 0%" id="greeting">
+          <form style="margin-top: 40px" id="signup-form" action="https://formspree.io/f/xoqolnbv" method="POST">
+            <div class="slide">
+          <h2 style="animation: fade-in-top 0.6s ease; font-size: 65px;">👋</h2>
+          <h1 style="margin-top: 30px"><span id="translatedText">Hi there!</span></h1>
+              <p>Welcome to the HTML Club!</p>
+              <button style="margin-top: 45px" class="join-button" type="button" onclick="nextSlide()">Get Started <i
+                  class="fas fa-chevron-right"></i></i></button>
+            </div>
+            <div class="slide">
+          <h2 style="animation: fade-in-top 0.6s ease; font-size: 65px;">👤</h2>
+          <h1 style="margin-top: 30px"><span id="translatedText">Name</span></h1>
+              <p>Please enter your name</p>
+              <input style="margin-top: 20px" placeholder="Full Name" name="fullName" id="name" required>
+              <button class="join-button" type="button" onclick="nextSlide()"><i
+                  class="fas fa-chevron-right"></i></i></button>
+            </div>
+            <div class="slide">
+          <h2 style="animation: fade-in-top 0.6s ease; font-size: 65px;">✉️</h2>
+          <h1 style="margin-top: 30px"><span id="translatedText">Contact</span></h1>
+              <p>Please enter your preferred email</p>
+              <input placeholder="Personal Email" type="email" name="email" id="email">
+              <button class="join-button" type="button" onclick="previousSlide()"><i
+                  class="fas fa-chevron-left"></i></i></button>
+              <button class="join-button" type="button" onclick="nextSlide()"><i
+                  class="fas fa-chevron-right"></i></i></button>
+            </div>
+            <div class="slide">
+          <h2 style="animation: fade-in-top 0.6s ease; font-size: 65px;"><i class="fas fa-discord"></i></h2>
+          <h1 style="margin-top: 30px"><span id="translatedText">Discord</span></h1>
+              <p>Please enter your Discord ID</p>
+              <input placeholder="Username" name="discord" required>
+              <button class="join-button" type="button" onclick="previousSlide()"><i
+                  class="fas fa-chevron-left"></i></i></button>
+              <button class="join-button" type="button" onclick="nextSlide()"><i
+                  class="fas fa-chevron-right"></i></i></button>
+            </div>
+            <div class="slide">
+          <h2 style="animation: fade-in-top 0.6s ease; font-size: 65px;"><i class="fa-brands fa-discord"></i></i></h2>
+          <h1 style="margin-top: 30px"><span id="translatedText">Discord</span></h1>
+              <p>Please enter your Discord ID</p>
+              <select id="skill" name="skill">
+                <option value="">What is your proficiency in HTML?</option>
+                <option value="1">Total Beginner</option>
+                <option value="2">I have some knowledge</option>
+                <option value="3">Eh i'm okay...</option>
+                <option value="4">I'm pretty good</option>
+                <option value="5">I'm a total pro</option>
+              </select>
+              <button class="join-button" type="button" onclick="previousSlide()"><i
+                  class="fas fa-chevron-left"></i></i></button>
+              <button style="margin-top: 10px;" onclick="window.open('../done', '_blank')" class="join-button"
+                type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </center>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    var currentSlide = 0;
+    var slides = document.getElementsByClassName("slide");
+    showSlide(currentSlide);
+
+    function showSlide(n) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[n].style.display = "block";
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function previousSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+  </script>
+<script>
+           const translations = [
+           { language: 'English', translation: 'Hi there!' },
+           { language: 'Spanish', translation: '¡Hola!' },
+           { language: 'French', translation: 'Bonjour!' },
+           { language: 'Korean', translation: '안녕하세요!' },
+           { language: 'Chinese', translation: '你好呀！' },
+           { language: 'German', translation: 'Hallo!' }
+         ];
+         
+         const translatedTextElement = document.getElementById('translatedText');
+         
+         function fadeOut(element) {
+           element.classList.add('fade-out');
+           setTimeout(function() {
+             element.style.visibility = 'hidden';
+             element.classList.remove('fade-out');
+           }, 500);
+         }
+         
+         function fadeIn(element) {
+           element.style.visibility = 'visible';
+           element.classList.add('fade-in');
+           setTimeout(function() {
+             element.classList.remove('fade-in');
+           }, 500);
+         }
+         function cycleTranslations() {
+           let currentIndex = 0;
+         
+           function updateTranslation() {
+             fadeOut(translatedTextElement);
+             setTimeout(() => {
+               translatedTextElement.textContent = translations[currentIndex].translation;
+               fadeIn(translatedTextElement);
+             }, 500);
+           }
+         
+           function nextTranslation() {
+             currentIndex = (currentIndex + 1) % translations.length;
+             updateTranslation();
+           }
+         
+           updateTranslation();
+         
+           setInterval(nextTranslation, 2000);
+         }
+         
+         cycleTranslations();
+</script>
+</body>

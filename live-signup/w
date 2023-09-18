@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/index.css" type="text/css">
   <link rel="icon" href="../assets/favicon.svg">
-  <title>Sign up - WWHS HTML Club</title>
+  <title>Live Sign up - WWHS HTML Club</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-rdfKbFIMq9Qy4y7IyvQa5M4zuFZ0FBEuWfc1jYaWbLd+GvTt0f5CrnobT5XpF1vMp1r8PZit9vYBl8Pj9ZacDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -16,22 +16,11 @@
   <main>
   <div id="content">
     <div class="navContainer">
-      <div class="logo">
-        <h2 onclick="document.location.href = '../'"><img style="animation: fade-in-top 0.6s ease; width: 35px;" src="/assets/logo.svg"></h2>
-      </div>
-      <nav>
-        <ul>
-          <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = '../'">Home</a></li>
-          <li><a style="animation: fade-in-top 0.8s ease;" onclick="document.location.href = '../about'">About</a></li>
-          <li><a style="animation: fade-in-top 1s ease;" onclick="document.location.href = '../join'">Join</a></li>
-          <li><a style="animation: fade-in-top 1.2s ease;" onclick="document.location.href = '../calendar'">Calendar</a></li>
-          <li><a style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help'">Docs</a></li>
-        </ul>
-      </nav>
     </div>
     <center>
     <section style="margin-left: 0%" id="greeting">
-      <h1 style="color: #00aeff">Join</h1>
+    <h2 onclick="document.location.href = '../'"><img style="animation: fade-in-top 0.6s ease; width: 65px;" src="/assets/logo.svg"></h2>
+      <h1 style="margin-top: 35px; color: #00aeff">Join</h1>
       <h1 style="margin-top: 10px">The Club</h1>
       <form style="margin-top: 40px" action="https://formspree.io/f/xoqolnbv" method="POST">
         <div>
