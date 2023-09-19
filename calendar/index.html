@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="../style/index.css">
   <link rel="icon" href="../assets/favicon.svg">
   <title>Calendar - WWHS HTML Club</title>
+  <style>
+    .highlight {
+      background-color: red;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -19,11 +25,11 @@
         </div>
         <nav>
           <ul>
-          <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = '../'">Home</a></li>
-          <li><a style="animation: fade-in-top 0.8s ease;" onclick="document.location.href = '../about'">About</a></li>
-          <li><a style="animation: fade-in-top 1s ease;" onclick="document.location.href = '../join'">Join</a></li>
-          <li><a style="animation: fade-in-top 1.2s ease;" onclick="document.location.href = '../calendar'">Calendar</a></li>
-          <li><a style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help'">Docs</a></li>
+            <li><a style="animation: fade-in-top 0.6s ease;" onclick="document.location.href = '../'">Home</a></li>
+            <li><a style="animation: fade-in-top 0.8s ease;" onclick="document.location.href = '../about'">About</a></li>
+            <li><a style="animation: fade-in-top 1s ease;" onclick="document.location.href = '../join'">Join</a></li>
+            <li><a style="animation: fade-in-top 1.2s ease;" onclick="document.location.href = '../calendar'">Calendar</a></li>
+            <li><a style="animation: fade-in-top 1.4s ease;" onclick="document.location.href = '../help'">Docs</a></li>
           </ul>
         </nav>
       </div>
@@ -35,24 +41,23 @@
             <div style="animation: fade-in-top 1s ease; margin-top: 20px;" class="calendar-year" id="calendar-year"></div>
           </div>
           <div style="animation: fade-in-top 1.5s ease; margin-top: 40px;" class="calendar-days" id="calendar-days"></div>
-            </p>
-      </div>
+        </div>
       </section>
-      </div>
-      <center>
-         <section style="margin-top: 25%">
-               <p><a href="https://github.com/WWHS-HTML-Cub">Github</a> • <a href="./join/">Join</a> • <a href="https://discord.gg/GfVud4v44A">Discord</a> </p>
-            <p style="margin-bottom: 6%; font-size: 15px;">2023-2024</p>
-         </section>
-         </div>
-      </center>
-      </main>
-    <script src="script.js"></script>
-    <script>
+    </div>
+    <center>
+      <section style="margin-top: 25%">
+        <p><a href="https://github.com/WWHS-HTML-Cub">Github</a> • <a href="./join/">Join</a> • <a href="https://discord.gg/GfVud4v44A">Discord</a></p>
+        <p style="margin-bottom: 6%; font-size: 15px;">2023-2024</p>
+      </section>
+    </center>
+  </main>
+  <script src="script.js"></script>
+  <script>
     var currentDate = new Date();
     var calendarMonth = document.getElementById('calendar-month');
     var calendarYear = document.getElementById('calendar-year');
     var calendarDays = document.getElementById('calendar-days');
+    var selectedDate = currentDate.getDate();
 
     function renderCalendar() {
       var currentMonth = currentDate.toLocaleString('default', { month: 'long' });
@@ -68,10 +73,10 @@
 
         var dayNumber = document.createElement('span');
         dayNumber.classList.add('day-number');
-        dayNumber.textContent= i;
+        dayNumber.textContent = i;
         calendarDay.appendChild(dayNumber);
 
-        if (i === currentDate.getDate()) {
+        if (i === selectedDate) {
           calendarDay.classList.add('highlight');
         }
 
@@ -82,6 +87,7 @@
           });
 
           this.classList.add('highlight');
+          selectedDate = parseInt(this.firstChild.textContent);
         });
 
         calendarDays.appendChild(calendarDay);
