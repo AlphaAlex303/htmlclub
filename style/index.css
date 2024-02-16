@@ -169,25 +169,25 @@ p {
 /*ANIMATIONS*/
 
 @keyframes fade-in-top {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes blendFade {
-	0% {
-		backdrop-filter: blur(0px)
-	}
+  0% {
+    backdrop-filter: blur(0px)
+  }
 
-	100% {
-		backdrop-filter: blur(20px)
-	}
+  100% {
+    backdrop-filter: blur(20px)
+  }
 }
 
 /*CALENDAR*/
@@ -268,7 +268,7 @@ p {
   display: none;
   position: fixed;
   z-index: 1;
-	animation: blendFade 1s ease-out forwards;
+  animation: blendFade 1s ease-out forwards;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -280,7 +280,7 @@ p {
 
 .processHelp-content {
   background-color: #121921;
-	animation: fade-in-top 1s ease-out forwards;
+  animation: fade-in-top 1s ease-out forwards;
   border-radius: 20px;
   margin: auto;
   padding: 20px;
